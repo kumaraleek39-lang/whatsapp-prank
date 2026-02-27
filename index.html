@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner Result</title>
+    <style>
+        body { background-color: #f0f2f5; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; width: 85%; max-width: 350px; }
+        h3 { color: #1fa855; margin-bottom: 10px; }
+        p { color: #555; font-size: 16px; margin-bottom: 25px; }
+        .btn { background: #1fa855; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px; width: 100%; }
+        #photo-area { display: none; }
+        img { width: 100%; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div id="msg-area">
+        <h3>✅ QR Scan Success!</h3>
+        <p>Aapka QR scan complete ho chuka hai. Data dekhne ke liye 'OK' par click karein.</p>
+        <button class="btn" onclick="showPhoto()">OK</button>
+    </div>
+
+    <div id="photo-area">
+        <h3 style="color: #e53935;">SURPRISE! 😂</h3>
+        <p>Pakde gaye na!</p>
+        <img src="prank.jpg" alt="Prank Image">
+    </div>
+</div>
+
+<script>
+    function showPhoto() {
+        document.getElementById('msg-area').style.display = 'none';
+        document.getElementById('photo-area').style.display = 'block';
+    }
+</script>
+
+</body>
+  </html>
+  
